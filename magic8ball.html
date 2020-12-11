@@ -1,0 +1,86 @@
+<html>
+<head>
+
+<font color="white">
+
+<script languague = "JavaScript">
+
+var answers = ["Maybe", "Definitely", "You don't want to know", "Yes", "Definitely Not", "Yea for sure", "Think hard and ask again", "Not happening buddy", "It will happen in your near future", "Will never happen"];
+
+function random()
+{
+	var rand = -1; // local variable
+	var userQ = document.getElementById("question");
+	var myAnswer = document.getElementById("answer");
+
+	
+	
+
+
+	rand = Math.random() * answers.length; // 0 - 10
+
+	rand = Math.floor(rand); 
+	
+
+
+	//alert(userQ.value.length);
+
+	if(userQ.value.length == 0) // nothing in the text box
+	{
+		myAnswer.value = "Please type a question first";
+	}
+	else
+	{
+		myAnswer.value = answers[rand];
+		if(rand == 7)
+		{
+			document.getElementById("player").play();
+		}
+	}
+}
+
+
+function reset()
+{
+	document.getElementById("answer").value = "";
+}
+
+
+
+
+
+</script>
+
+</head>
+
+<body
+	background="images/8ballbkng.jpeg" >
+
+<center>
+
+<h1>Magic 8 Ball</h1>
+</br>
+<img src="images/8ballguy.jpg"/>
+</br></br>
+
+<input id = "question" type = "text" size="80" onfocusin="reset()"/>
+</br></br></br>
+
+<input type="button" value="Click here" onClick="random()"/>
+</br></br></br>
+
+<input id = "answer" type = "text" size="80" readonly = true/>
+</br>
+
+<audio id = "player" src = "sounds/fail.mp3"> </audio>
+
+</center>
+
+Click <a href="index.html">here</a> return to my homepage.
+
+</br>
+</br>
+</br>
+
+</body>
+</html>
