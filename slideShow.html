@@ -1,0 +1,93 @@
+<html>
+<head>
+
+<script language = "JavaScript">
+
+
+
+var number = 0;
+
+var picList = [ "images/akiem.jpg", "images/tarik.jpg", "images/allen.jpg", "images/khalil.jpg", "images/eddie.jpg" ];
+
+var clipList = [ "sounds/akiem.mp3", "sounds/tarik.mp3", "sounds/allen.mp3", "sounds/khalil.mp3", "sounds/eddie.mp3" ];
+
+
+
+function startShow()
+
+{
+
+	var pic = document.getElementById("picFrame");
+	
+	pic.src = picList[number];
+
+	var clip = document.getElementById("myAudio");
+
+
+
+	pic.src = picList[number];
+
+	clip.src = clipList[number];
+
+	clip.play();	
+
+
+
+	number=number+1;
+
+
+
+	if(number == 5)
+
+	{
+
+	number=0
+
+	}
+
+}
+
+	
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<center> 
+
+<h1> Chicago Bears Slideshow </h1>
+
+
+
+<img id="picFrame" src="images/chibears.jpeg"/>
+
+
+
+<audio id="myAudio"> </audio>
+
+
+
+<br/>
+
+<br/>
+
+
+
+<input type="button" value="Click Me" onClick="startShow()">
+
+
+
+</center>
+
+
+
+Click <a href="index.html">here</a> to return to my homepage.
+
+
+
+</body>
+</html>
