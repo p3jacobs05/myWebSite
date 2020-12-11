@@ -1,0 +1,70 @@
+<html>
+<head>
+<body bgcolor="orange">
+<font color="white">
+
+<script language = "JavaScript">
+
+var number = 0; // global variable exists while the page is loaded
+//myList is a list of variables. "array"
+var myList = [ "Anne", "Bob", "Cathy", "Doug" ];
+
+
+
+function tester()
+{
+/*
+	// var answer = confirm("Hello World");// Creates a new variable and stores the users response. 
+	var answer = prompt("What is your name?");// Creates a new variable and stores the users response.
+	// "Text" == string literal
+	alert("Welcome to my site, " + answer);
+	// = is the assignment operator -- assigns what's on the right to what's on the left
+	number = number - 1;// semi colon indicates end of a line
+	if(number == 0)// == test for equality (does the right EQUAL the left side)
+	{
+		alert("Blastoff!");
+		number = 11;
+	}
+		else // if the condition above is NOT met
+	{
+		alert(number);
+	}
+*/
+	// display a different element of myList when button is clicked.
+	// after last element is displayed, the program will reset.
+	
+	if(number == 0)
+	{
+		alert(myList[0]);// access the element at position 1 of myList (2nd element)
+	}
+	{
+		alert(myList[1]);
+	}
+	{
+		alert(myList[2]);
+	}
+	{
+		alert(myList[3]);
+	}
+
+}
+
+
+</script>
+
+</head>
+<body>
+<center> 
+<h1> JavaScript Tester </h1>
+
+<br/>
+<br/>
+
+<input type="button" value="Click Me" onClick="tester()">
+
+</center>
+
+Click <a href="index.html">here</a> to return to my homepage.
+
+</body>
+</html>
